@@ -16,8 +16,9 @@ theme:
 
 nav:
   - 'Home': index.md
-  - '日本語': tutorial/ja
-  - 'English': tutorial/en
+  - 'Tutorial' : tutorial
+    - 'Japanese': tutorial/ja
+    - 'English': tutorial/en
   - 'HowToContribute': HowToContribute.md
 
 plugins:
