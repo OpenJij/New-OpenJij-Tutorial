@@ -22,7 +22,10 @@ nav:
   - 'HowToContribute': HowToContribute.md
 
 plugins:
-  - mkdocs-jupyter
+  - mkdocs-jupyter:
+     execute: True
+     allow_errors: false
+     include_source: True
   - git-revision-date-localized:
      locale: ja
      fallback_to_build_date: true
