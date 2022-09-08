@@ -15,4 +15,5 @@ mkdocs-nav-enhancements
 mkdocs-autorefs
 mkdocs-static-i18n
 mkdocs-minify-plugin
+mkdocs-htmlproofer-plugin
 pymdown-extensions
