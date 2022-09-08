@@ -16,7 +16,7 @@ theme:
 
 nav:
   - 'Home': index.md
-  - 'Tutorial' : tutorial
+  - 'Tutorial' 
     - 'Japanese': tutorial/ja
     - 'English': tutorial/en
   - 'HowToContribute': HowToContribute.md
