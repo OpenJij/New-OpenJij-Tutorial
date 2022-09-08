@@ -3,8 +3,8 @@ copyright: 'Copyright © 2022 - Jij Inc.'
 
 theme:
   name: material
-  logo: assets/white_bg_white_logo.svg
-  favicon: assets/white_bg_white_logo.svg
+  logo: assets/OpenJij-Logo.webp
+  favicon: assets/favicon.ico
   palette:
     primary: indigo
   features:
