@@ -1,0 +1,89 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  release:
+    types: [published]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-py:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Python 
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Get Python Version
+        shell: bash
+        run: |
+          set -eux
+          python --version > python_version.txt
+          cat python_version.txt
+      - name: Install dependencies
+        run: |
+          set -eux
+          python -m pip install pip-tools
+          pip-compile requirements.in
+      - uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-doc-${{ hashFiles('python_version.txt') }}-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-doc-${{ hashFiles('python_version.txt') }}-${{ hashFiles('requirements.txt') }}
+            ${{ runner.os }}-pip-doc-${{ hashFiles('python_version.txt') }}
+            ${{ runner.os }}-pip-doc-
+      - name: pip-sync 
+        run: pip-sync requirements.txt
+      - name: Cache cargo registry and git trees
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+      - name: python -m mkdocs build
+        run: |
+          python -m mkdocs --help
+          python -m mkdocs build  
+      - uses: actions/upload-artifact@v3
+        with:
+          name: doc
+          path: ./site
+          retention-days: 30    
+  # Single deploy job since we're just deploying
+  deploy:
+    needs: [build-rs, build-py]
+    # Allow one concurrent deployment
+    concurrency:
+      group: "pages"
+      cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: doc 
+          path: .
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: './site'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

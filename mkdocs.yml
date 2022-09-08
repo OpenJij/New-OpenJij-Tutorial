@@ -15,26 +15,37 @@ theme:
     - navigation.indexes
 
 nav:
-  - Home: index.md
+  - 'Home': index.md
+  - '日本語': tutorial/ja
+  - 'English': tutorial/en
+  - 'HowToContribute': HowToContribute.md
 
 plugins:
+  - mkdocs-jupyter
   - git-revision-date-localized:
      locale: ja
+     fallback_to_build_date: true
   - search
-  - autorefs
   - tags 
   - minify:
       minify_html: true
       minify_js: true
       minify_css: true
+  - search
+  - gen-files:
+      scripts:
+      - docs/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
   - mkdocstrings:
       default_handler: python
       handlers:
         python:
-          options:
-             show_submodules: true
-             show_source: false
-             docstring_style: "google"
+          rendering:
+            show_source: false
+          selection:
+            docstring_style: "google"
 
 
 markdown_extensions:
