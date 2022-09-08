@@ -35,6 +35,7 @@ plugins:
       minify_css: true
   - literate-nav:
       nav_file: SUMMARY.md
+      implicit_index: true
   - section-index
   - mkdocstrings:
       default_handler: python
