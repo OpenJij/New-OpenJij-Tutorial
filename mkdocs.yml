@@ -27,12 +27,12 @@ plugins:
      locale: ja
      fallback_to_build_date: true
   - search
+  - autorefs
   - tags 
   - minify:
       minify_html: true
       minify_js: true
       minify_css: true
-  - search
   - literate-nav:
       nav_file: SUMMARY.md
   - section-index
