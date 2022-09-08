@@ -72,22 +72,39 @@ plugins:
 
 
 markdown_extensions:
-  - markdown_katex
-  - pymdownx.details
-  - pymdownx.betterem 
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.highlight
-  - pymdownx.superfences
-  - pymdownx.smartsymbols
-  - pymdownx.snippets
+
+  # Python Markdown
+  - abbr
   - admonition
-  - def_list
   - attr_list
-  - tables
+  - def_list
+  - footnotes
+  - md_in_html
   - toc:
       permalink: true
+  
+  # Python Markdown Extensions
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight
+      use_pygments: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.critic
+  - tables
   - codehilite:
       noclasses: true
       pygments_style: colorful
