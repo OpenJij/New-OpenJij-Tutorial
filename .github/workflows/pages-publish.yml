@@ -74,7 +74,7 @@ jobs:
           name: doc 
           path: .
       - name: DU
-        runs: du -ah
+        run: du -ah
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
