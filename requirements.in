@@ -11,6 +11,7 @@ mkdocs-section-index
 markdown-katex
 mkdocs-git-revision-date-localized-plugin
 mkdocs-awesome-pages-plugin
+mkdocs-nav-enhancements
 mkdocs-autorefs
 mkdocs-static-i18n
 mkdocs-minify-plugin
