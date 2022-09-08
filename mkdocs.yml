@@ -51,6 +51,7 @@ plugins:
      type: timeago
      enable_creation_date: true
   - search
+  - awesome-pages
   - autorefs
   - tags 
   - minify:
