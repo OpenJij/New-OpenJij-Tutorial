@@ -46,7 +46,7 @@ plugins:
      allow_errors: false
      include_source: True
   - git-revision-date-localized:
-     locale: ja
+     locale: en
      fallback_to_build_date: true
      type: timeago
      enable_creation_date: true
