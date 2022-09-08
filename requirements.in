@@ -16,4 +16,5 @@ mkdocs-autorefs
 mkdocs-static-i18n
 mkdocs-minify-plugin
 mkdocs-htmlproofer-plugin
+mkdocs-pdf-export-plugin
 pymdown-extensions
