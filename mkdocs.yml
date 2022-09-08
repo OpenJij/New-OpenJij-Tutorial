@@ -1,10 +1,16 @@
 site_name: 'OpenJij Tutorial'
 copyright: 'Copyright © 2022 - Jij Inc.'
+repo_url: https://github.com/OpenJij/New-OpenJij-Tutorial
+repo_name: OpenJij/New-OpenJij-Tutorial
+edit_uri: edit/main/docs/
 
 theme:
   name: material
   logo: assets/OpenJij-Logo.webp
   favicon: assets/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  language: en
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -18,10 +24,14 @@ theme:
         name: Switch to light mode
   features:
     - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.sections
     - navigation.expand
     - navigation.indexes
+    - toc.integrate
+    - header.autohide
 
 nav:
   - 'Home': index.md
@@ -38,6 +48,8 @@ plugins:
   - git-revision-date-localized:
      locale: ja
      fallback_to_build_date: true
+     type: timeago
+     enable_creation_date: true
   - search
   - autorefs
   - tags 
