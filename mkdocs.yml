@@ -63,6 +63,9 @@ plugins:
       implicit_index: true
   - section-index
   - mkdocs-nav-enhancements
+  - htmlproofer
+      raise_error: False
+      
 
 markdown_extensions:
   - abbr
