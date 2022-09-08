@@ -2,7 +2,7 @@ site_name: 'OpenJij Tutorial'
 copyright: 'Copyright © 2022 - Jij Inc.'
 repo_url: https://github.com/OpenJij/New-OpenJij-Tutorial
 repo_name: OpenJij/New-OpenJij-Tutorial
-#edit_uri: edit/main/docs/
+edit_uri: '' #edit/main/docs/
 
 theme:
   name: material
