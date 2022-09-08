@@ -62,6 +62,7 @@ plugins:
       nav_file: SUMMARY.md
       implicit_index: true
   - section-index
+  - mkdocs-nav-enhancements
 
 markdown_extensions:
   - abbr
