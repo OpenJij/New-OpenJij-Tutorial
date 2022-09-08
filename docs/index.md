@@ -4,7 +4,7 @@
 
 *   OpenJij: [GitHub repository](https://github.com/OpenJij/OpenJij)    
 
-*   OpenJij Tutorial: [GitHub repository](https://github.com/OpenJij/New-OpenJij-Tutoria)
+*   OpenJij Tutorial: [GitHub repository](https://github.com/OpenJij/New-OpenJij-Tutorial)
 
 ## Contact
 
