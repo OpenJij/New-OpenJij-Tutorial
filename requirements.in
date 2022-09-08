@@ -1,0 +1,14 @@
+openjij
+
+Sphinx 
+recommonmark 
+sphinx-rtd-theme 
+mkdocs[i18n]
+mkdocs-material 
+mkdocstrings[python]
+mkdocs-git-revision-date-localized-plugin
+mkdocs-static-i18n
+mkdocs-autorefs
+markdown-katex
+mkdocs-minify-plugin
+pymdown-extensions

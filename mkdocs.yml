@@ -1,0 +1,60 @@
+site_name: 'OpenJij Tutorial'
+copyright: 'Copyright © 2022 - Jij Inc.'
+
+theme:
+  name: material
+  logo: assets/white_bg_white_logo.svg
+  favicon: assets/white_bg_white_logo.svg
+  palette:
+    primary: indigo
+  features:
+    - navigation.instant
+    - navigation.top
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+
+nav:
+  - Home: index.md
+
+plugins:
+  - git-revision-date-localized:
+     locale: ja
+  - search
+  - autorefs
+  - tags 
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+             show_submodules: true
+             show_source: false
+             docstring_style: "google"
+
+
+markdown_extensions:
+  - markdown_katex
+  - pymdownx.details
+  - pymdownx.betterem 
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - admonition
+  - def_list
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - codehilite:
+      noclasses: true
+      pygments_style: colorful
+      linenums: true
