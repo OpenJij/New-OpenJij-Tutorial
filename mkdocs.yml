@@ -61,7 +61,6 @@ plugins:
   - mkdocs-nav-enhancements
   - htmlproofer:
       raise_error: False
-  - pdf-export
       
 markdown_extensions:
   - abbr
