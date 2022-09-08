@@ -2,7 +2,7 @@ site_name: 'OpenJij Tutorial'
 copyright: 'Copyright © 2022 - Jij Inc.'
 repo_url: https://github.com/OpenJij/New-OpenJij-Tutorial
 repo_name: OpenJij/New-OpenJij-Tutorial
-edit_uri: edit/main/docs/
+#edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -24,7 +24,6 @@ theme:
         name: Switch to light mode
   features:
     - navigation.instant
-    - navigation.top
     - navigation.sections
     - navigation.expand
     - navigation.indexes
@@ -33,8 +32,8 @@ theme:
 nav:
   - 'Home': index.md
   - 'Tutorial' :
-    - 'Japanese': tutorial/ja
     - 'English': tutorial/en
+    - 'Japanese': tutorial/ja
   - 'HowToContribute': HowToContribute.md
 
 plugins:
