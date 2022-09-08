@@ -63,10 +63,10 @@ plugins:
       implicit_index: true
   - section-index
   - mkdocs-nav-enhancements
-  - htmlproofer
+  - htmlproofer:
       raise_error: False
+  - pdf-export
       
-
 markdown_extensions:
   - abbr
   - admonition
