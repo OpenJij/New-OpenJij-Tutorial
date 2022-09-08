@@ -30,7 +30,7 @@ First, clone from [GitHub repository](https://github.com/OpenJij/OpenJijTutorial
 
 Environment reproduction by pipenv
 
-```
+```shell
 $ pipenv update
 ```
 
@@ -85,7 +85,7 @@ Also, if you make changes to Jupyter Notebooks, please state in the pull request
 
 
 1. You need to put an `h1` level heading in the first cell.
-    ```
+    ```markdown
     # Title of Notebook
     ```
 2. Do not write anything other than the `h1` level title in the first cell.
