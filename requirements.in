@@ -10,6 +10,7 @@ mkdocs-literate-nav
 mkdocs-section-index
 markdown-katex
 mkdocs-git-revision-date-localized-plugin
+mkdocs-awesome-pages-plugin
 mkdocs-autorefs
 mkdocs-static-i18n
 mkdocs-minify-plugin
