@@ -48,13 +48,6 @@ jobs:
             ${{ runner.os }}-pip-doc-
       - name: pip-sync 
         run: pip-sync requirements.txt
-      - name: Cache cargo registry and git trees
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - name: python -m mkdocs build
         run: |
           python -m mkdocs --help

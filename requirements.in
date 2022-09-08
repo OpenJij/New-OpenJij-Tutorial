@@ -6,7 +6,6 @@ mkdocs[i18n]
 mkdocs-jupyter
 mkdocs-material 
 mkdocstrings[python]
-mkdocs-gen-files
 mkdocs-literate-nav
 mkdocs-section-index
 markdown-katex
