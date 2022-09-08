@@ -61,19 +61,8 @@ plugins:
       nav_file: SUMMARY.md
       implicit_index: true
   - section-index
-  - mkdocstrings:
-      default_handler: python
-      handlers:
-        python:
-          rendering:
-            show_source: false
-          selection:
-            docstring_style: "google"
-
 
 markdown_extensions:
-
-  # Python Markdown
   - abbr
   - admonition
   - attr_list
@@ -82,13 +71,11 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
-  
-  # Python Markdown Extensions
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.details
-  - pymdownx.highlight
+  - pymdownx.highlight:
       use_pygments: true
       auto_title: true
   - pymdownx.inlinehilite
@@ -99,8 +86,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
-      custom_checkbox: true
-  
+      custom_checkbox: true 
   - pymdownx.tilde
   - pymdownx.snippets
   - pymdownx.critic
